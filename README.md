@@ -11,7 +11,7 @@ npm install
 2. Run frontend and backend 
 
 ```bash
-npm run dev
+npm run start
 ```
 
 3. Navigate to http://localhost:4200
