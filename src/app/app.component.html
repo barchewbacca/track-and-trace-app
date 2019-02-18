@@ -1,0 +1,24 @@
+<div class="page">
+  <header class="w-full bg-white px-5 md:sticky md:pin-t md:z-50 md:shadow">
+    <div class="container">
+      <div class="header flex items-center justify-center w-full">
+        <a routerLink="/">
+          <img class="logo block" src="/assets/logo.svg" alt="Logo" />
+        </a>
+      </div>
+    </div>
+  </header>
+  <main class="main md:pb-12 flex flex-col">
+    <router-outlet></router-outlet>
+  </main>
+  <footer class="footer w-full px-5 pb-5 pt-6 md:h-12 md:fixed md:pin-b md:z-50 md:py-0">
+    <div class="container flex flex-col-reverse items-center justify-between h-auto md:flex-row md:h-full">
+      <div class="mt-5 md:mt-0">© {{ dateObj | date: 'yyyy' }} UBSend</div>
+      <ul class="list-reset flex flex-col items-center md:flex-row">
+        <li class="mb-2 md:mb-0 md:ml-1">Privacy & Cookies <span class="hidden md:inline">|</span></li>
+        <li class="mb-2 md:mb-0 md:ml-1">Ts & Cs <span class="hidden md:inline">|</span></li>
+        <li class="mb-2 md:mb-0 md:ml-1">Accessibility</li>
+      </ul>
+    </div>
+  </footer>
+</div>

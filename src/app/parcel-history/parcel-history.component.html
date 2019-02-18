@@ -1,0 +1,27 @@
+<div>
+  <div class="row uppercase tracking-wide flex text-xs py-3">
+    <div class="column font-semibold md:hidden">
+      <span>Shipment history</span>
+    </div>
+    <div class="column hidden md:block">
+      <span>Local time</span>
+    </div>
+    <div class="column hidden md:block">
+      <span>Location</span>
+    </div>
+    <div class="column hidden md:block">
+      <span>Action</span>
+    </div>
+  </div>
+  <div *ngFor="let event of parcel.history" class="row flex flex-col text-sm py-3 md:flex-row">
+    <div class="column">
+      <span data-test="localTime">{{ event.localTime }}</span>
+    </div>
+    <div class="column">
+      <span data-test="location">{{ event.location }}</span>
+    </div>
+    <div class="column font-semibold">
+      <span data-test="action">{{ event.action }}</span>
+    </div>
+  </div>
+</div>

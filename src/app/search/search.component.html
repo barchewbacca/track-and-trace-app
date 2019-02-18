@@ -1,0 +1,34 @@
+<form
+  class="search-panel p-4 flex flex-col items-center md:flex-row"
+  [class.search-panel--mini]="isSmallSearch"
+  (ngSubmit)="onSubmit()"
+  autocomplete="off"
+  data-test="form"
+>
+  <label class="field relative block font-semibold flex-grow w-full md:w-auto" [class.is-label-top]="isLabelTop">
+    <span
+      class="label absolute my-auto pin-y px-3 w-full h-full pointer-events-none text-left overflow-hidden whitespace-no-wrap flex items-center"
+    >
+      <span class="label-copy leading-none">Tracking number</span>
+    </span>
+    <input
+      #searchInput
+      class="input w-full h-full rounded px-3 pt-3 uppercase outline-none"
+      [(ngModel)]="trackingNumber"
+      (focus)="liftLabel(true)"
+      (blur)="liftLabel(searchInput.value)"
+      name="trackingNumber"
+      data-test="input"
+    />
+  </label>
+  <button
+    class="button font-semibold tracking-wide text-sm px-4 uppercase mt-4 rounded w-full md:w-auto md:ml-4 md:mt-0"
+    type="submit"
+  >
+    <img *ngIf="isSmallSearch" src="/assets/icon-search.svg" alt="Search icon" width="18" />
+    <span *ngIf="!isSmallSearch">Track my parcel</span>
+  </button>
+</form>
+<div *ngIf="!isSmallSearch">
+  <app-search-disclaimer [noResults]="noResults"></app-search-disclaimer>
+</div>

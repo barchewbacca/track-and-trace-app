@@ -1,0 +1,41 @@
+<div class="p-5 mb-4 md:mb-0">
+  <div class="shipper rounded-lg">
+    <div class="service p-4 bg-white flex flex-col items-start md:flex-row">
+      <img
+        class="logo mb-3 md:mb-0x"
+        [attr.src]="parcel.serviceLogo.src"
+        [attr.alt]="parcel.serviceLogo.alt"
+        [attr.width]="parcel.serviceLogo.width"
+        data-test="serviceLogo"
+      />
+      <div class="md:px-5 md:ml-1">
+        <p class="label">Service</p>
+        <p data-test="service">{{ parcel.service }}</p>
+      </div>
+    </div>
+    <div class="shipper-details flex flex-wrap">
+      <div class="shipper-detail flex-auto w-1/2 p-3 md:p-6">
+        <p class="label">Delivered on</p>
+        <p data-test="deliveredOn">{{ parcel.deliveredOn }}</p>
+      </div>
+      <div class="shipper-detail flex-auto w-1/2 p-3 md:p-6">
+        <p class="label">Package number</p>
+        <p data-test="packageNumber">{{ parcel.packageNumber }}</p>
+      </div>
+      <div class="shipper-detail flex-auto w-1/2 p-3 md:p-6">
+        <p class="label">Pickup time</p>
+        <p data-test="pickupTime">{{ parcel.pickupTime }}</p>
+      </div>
+      <div class="shipper-detail flex-auto w-1/2 p-3 md:p-6">
+        <p class="label">Order number</p>
+        <p data-test="orderNumber">{{ parcel.orderNumber }}</p>
+      </div>
+    </div>
+  </div>
+  <div class="mt-4 md:mt-8">
+    <a class="doc-link text-sm flex items-center uppercase no-underline font-semibold" routerLink="/">
+      <img class="mr-3" src="/assets/icon-pdf.svg" alt="Pdf icon" width="18" />
+      Shipment received and signed
+    </a>
+  </div>
+</div>

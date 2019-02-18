@@ -1,0 +1,21 @@
+.row {
+  border-top: 0.1rem solid #e0e0e0;
+
+  &:first-child {
+    background-color: #f2f3f5;
+    color: rgba(0, 0, 0, 0.54);
+  }
+}
+
+.column {
+  flex: 0 1 21.5rem;
+  padding: 0 2rem;
+
+  @media (max-width: 767px) {
+    flex-basis: auto;
+  }
+
+  &:last-child {
+    flex-grow: 1;
+  }
+}

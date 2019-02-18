@@ -1,0 +1,27 @@
+<div
+  *ngIf="noResults"
+  class="disclaimer disclaimer--error text-sm px-4 pt-6 pb-4 mt-5"
+  data-test="no-results-disclaimer"
+>
+  <img class="block m-auto mb-3" src="/assets/icon-warning.svg" alt="Sorry we couldn't find any results" width="30" />
+  <h4 class="error-title">Sorry we couldn't find any results for this tracking number.</h4>
+  <div class="bg-white p-5 mt-6">
+    <h4 class="mb-4">Why it doesn't work?</h4>
+    <ul class="text-left pl-4">
+      <li>It takes approximately 12 hours to make tracking availiable for you.</li>
+      <li>Search parameters are missing or incorrect.</li>
+    </ul>
+  </div>
+</div>
+
+<div *ngIf="!noResults" class="disclaimer text-sm px-4 pt-6 pb-4 mt-5" data-test="default-disclaimer">
+  <img
+    class="block m-auto mb-3"
+    src="/assets/icon-check.svg"
+    alt="Track & Trace is a convenient way to track your shipment with barcode online"
+    width="22"
+  />
+  <h3 class="text-sm md:text-base">
+    Track & Trace is a convenient way to track your shipment with barcode online. All you need is the tracking number!
+  </h3>
+</div>

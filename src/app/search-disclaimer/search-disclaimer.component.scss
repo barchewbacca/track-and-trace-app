@@ -1,0 +1,12 @@
+.disclaimer {
+  color: rgba(0, 0, 0, 0.38);
+
+  &--error {
+    background-color: #fbe3e1;
+    color: rgba(0, 0, 0, 0.87);
+  }
+
+  .error-title {
+    color: #b95353;
+  }
+}

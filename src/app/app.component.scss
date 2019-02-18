@@ -1,0 +1,36 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 110rem;
+  margin: 0 auto;
+}
+
+.header {
+  height: 7.2rem;
+}
+
+.logo {
+  width: 12rem;
+}
+
+.main {
+  flex: 1 0 auto;
+  border: 2rem solid #e3e4e6;
+  border-bottom: 0;
+  background-color: #f2f3f5;
+  background-color: #e3e4e6;
+}
+
+.footer {
+  background-color: #e3e4e6;
+}
+
+app-dashboard {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}

@@ -1,0 +1,19 @@
+<div class="search-bar -mx-5 -mt-5 mb-5">
+  <div class="container flex flex-col justify-between py-3 px-5 md:flex-row md:items-center">
+    <h3 class="font-normal tracking-wide mb-3 md:mb-0">Track & Trace</h3>
+    <app-search [isSmallSearch]="true"></app-search>
+  </div>
+</div>
+<div *ngIf="parcel" class="container">
+  <div class="bg-white rounded">
+    <div class="flex flex-col flex-1 items-start md:flex-row">
+      <div class="flex-1">
+        <app-parcel-details [parcel]="parcel"></app-parcel-details>
+      </div>
+      <div class="flex-1 w-full">
+        <app-parcel-shipper [parcel]="parcel"></app-parcel-shipper>
+      </div>
+    </div>
+    <app-parcel-history [parcel]="parcel"></app-parcel-history>
+  </div>
+</div>
